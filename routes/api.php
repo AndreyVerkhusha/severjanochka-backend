@@ -20,5 +20,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('/favorites', [FavoriteController::class, 'index']);
     Route::get('/cart-items', [CartItemController::class, 'index']);
     Route::post('/cart-items', [CartItemController::class, 'store']);
+    Route::delete('/cart-items', [CartItemController::class, 'destroy']);
+    Route::delete('/cart-items/remove-all', [CartItemController::class, 'removeAll']);
     Route::post('/favorites/toggle/{id}', [FavoriteController::class, 'toggleFavorite']);
 });
