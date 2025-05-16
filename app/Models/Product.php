@@ -19,4 +19,8 @@ class Product extends Model {
     public function users() {
         return $this->belongsToMany(User::class, 'favorites');
     }
+
+    public function comments() {
+        return $this->hasMany(Comment::class );
+    }
 }

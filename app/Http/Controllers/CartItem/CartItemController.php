@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\CartItem;
 
 use App\Http\Requests\CartItem\CartItemCreateRequest;
-use App\Models\CartItem;
 use App\Services\CartItem\CartItemService;
 use Illuminate\Http\Request;
 

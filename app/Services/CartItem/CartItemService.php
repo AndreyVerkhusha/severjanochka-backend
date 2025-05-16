@@ -10,8 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CartItemService {
     public function index(Request $request) {
-        $user_id = $request->user()->id;
-        $cartItems = CartItem::where('user_id', $user_id)->get();
+        $cartItems = $request->user()->cartItems()->get();
 
         return response()->json(CartItemResource::collection($cartItems));
     }
@@ -22,9 +21,7 @@ class CartItemService {
         $product_id = $validated['product_id'];
         $quantity = $validated['quantity'];
 
-        $cartItem = CartItem::where('user_id', $user_id)
-            ->where('product_id', $product_id)
-            ->first();
+        $cartItem = $request->user()->cartItems()->where('product_id', $product_id)->first();
 
         if ($cartItem) {
             if ($quantity === 0) {
