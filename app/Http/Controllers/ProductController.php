@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Product\ProductRequest;
-use App\Services\Product\ProductService;
+use App\Http\Requests\ProductRequest;
+use App\Services\ProductService;
 
 class ProductController extends Controller {
     public $productService;

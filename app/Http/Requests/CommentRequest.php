@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Comment;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use function Symfony\Component\Translation\t;
 
 class CommentRequest extends FormRequest
 {

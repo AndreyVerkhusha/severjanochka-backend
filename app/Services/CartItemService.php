@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\CartItem;
+namespace App\Services;
 
-use App\Http\Requests\CartItem\CartItemCreateRequest;
+use App\Http\Requests\CartItemCreateRequest;
 use App\Http\Resources\CartItemResource;
 use App\Models\CartItem;
 use Illuminate\Http\Request;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\CartItem;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CartItemCreateRequest extends FormRequest {
+class ProductRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -19,8 +19,9 @@ class CartItemCreateRequest extends FormRequest {
      */
     public function rules(): array {
         return [
-            'product_id' => 'required|exists:products,id',
-            'quantity'   => 'required|min:1',
+            'page'     => 'nullable|integer',
+            'per_page' => 'nullable|integer',
+            'category' => 'nullable|integer',
         ];
     }
 }

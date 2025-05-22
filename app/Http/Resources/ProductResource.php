@@ -13,15 +13,19 @@ class ProductResource extends JsonResource {
      */
     public function toArray(Request $request): array {
         return [
-            'id'                  => $this->id,
-            'name'                => $this->name,
-            'description'         => $this->description,
-            'price'               => $this->price,
-            'stock'               => $this->stock,
-            'image_url'           => $this->image_url,
-            'discounted_price'    => $this->discounted_price,
+            'id' => $this->id,
+            'name' => $this->name,
+            'price' => $this->price,
+            'brand' => $this->brand,
+            'category' => new CategoryResource($this->category),
+            'weight_or_volume' => $this->weight_or_volume,
+            'country_of_manufacture' => $this->country_of_manufacture,
+            'stock' => $this->stock,
+            'description' => $this->description,
+            'image_url' => $this->image_url,
+            'discounted_price' => $this->discounted_price,
             'discount_percentage' => $this->discount_percentage,
-            'category'            => new CategoryResource($this->category),
+            'rating' => $this->averageRating()
         ];
     }
 }

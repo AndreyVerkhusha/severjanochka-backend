@@ -2,14 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-/**
- * @mixin \Eloquent
- */
-class Category extends Model {
-    use HasFactory;
+class Category extends BaseModel {
 
     public function products() {
         return $this->hasMany(Product::class);

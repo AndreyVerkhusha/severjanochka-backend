@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Favorite;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Services\Favorite\FavoriteService;
+use App\Services\FavoriteService;
 use Illuminate\Http\Request;
 
 class FavoriteController extends Controller {

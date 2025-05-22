@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\CartItem;
+namespace App\Http\Controllers;
 
-use App\Http\Requests\CartItem\CartItemCreateRequest;
-use App\Services\CartItem\CartItemService;
+use App\Http\Requests\CartItemCreateRequest;
+use App\Services\CartItemService;
 use Illuminate\Http\Request;
 
 class CartItemController {

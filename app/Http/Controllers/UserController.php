@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\User\UserCreateRequest;
-use App\Services\User\UserService;
+use App\Http\Requests\UserCreateRequest;
+use App\Services\UserService;
 
 class UserController extends Controller {
     public $userService;

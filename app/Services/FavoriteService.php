@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Favorite;
+namespace App\Services;
 
 use App\Models\Product;
 use Illuminate\Http\Request;

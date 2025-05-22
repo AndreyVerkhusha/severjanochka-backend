@@ -2,15 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Traits\Filterable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-/**
- * @mixin \Eloquent
- */
-class Product extends Model {
-    use Filterable, HasFactory;
+class Product extends BaseModel {
 
     public function category() {
         return $this->belongsTo(Category::class);
@@ -22,5 +14,14 @@ class Product extends Model {
 
     public function comments() {
         return $this->hasMany(Comment::class );
+    }
+
+    public function ratings() {
+        return $this->hasMany(ProductRating::class );
+    }
+
+    public function averageRating() {
+        $avg = $this->ratings()->avg('rating') ?? 0;
+        return round($avg, 1);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\User;
+namespace App\Services;
 
-use App\Http\Requests\User\UserCreateRequest;
+use App\Http\Requests\UserCreateRequest;
 use App\Models\User;
 use Illuminate\Database\QueryException;
 

@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\CartItem\CartItemController;
-use App\Http\Controllers\Comment\CommentController;
-use App\Http\Controllers\Favorite\FavoriteController;
-use App\Http\Controllers\Product\ProductController;
-use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartItemController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

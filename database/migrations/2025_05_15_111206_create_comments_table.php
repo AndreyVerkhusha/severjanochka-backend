@@ -12,8 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->innoDb();
-
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
@@ -22,6 +20,7 @@ return new class extends Migration
 
             $table->softDeletes();
             $table->index(['user_id', 'product_id']);
+            $table->innoDb();
         });
     }
 

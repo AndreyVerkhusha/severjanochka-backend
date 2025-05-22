@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Comment;
+namespace App\Http\Controllers;
 
 
-use App\Http\Requests\Comment\CommentRequest;
-use App\Models\Comment;
-use App\Models\Product;
-use App\Services\Comment\CommentService;
+use App\Http\Requests\CommentRequest;
+use App\Services\CommentService;
 use Illuminate\Http\Request;
 
 class CommentController {

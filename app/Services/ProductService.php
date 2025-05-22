@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services\Product;
+namespace App\Services;
 
-use App\Http\Filters\Product\ProductFilter;
-use App\Http\Requests\Product\ProductRequest;
+use App\Http\Filters\ProductFilter;
+use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 

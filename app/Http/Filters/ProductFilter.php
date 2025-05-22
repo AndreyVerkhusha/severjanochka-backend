@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Filters\Product;
+namespace App\Http\Filters;
 
-use App\Http\Filters\AbstractFilter;
 use Illuminate\Database\Eloquent\Builder;
 
 class ProductFilter extends AbstractFilter {

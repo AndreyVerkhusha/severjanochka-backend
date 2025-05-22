@@ -10,16 +10,21 @@ return new class extends Migration {
      */
     public function up(): void {
         Schema::create('products', function (Blueprint $table) {
-            $table->innoDb();
             $table->id();
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('name');
-            $table->text('description')->nullable();
             $table->decimal('price');
+            $table->string('brand');
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->integer('weight_or_volume');
+            $table->string('country_of_manufacture');
             $table->integer('stock')->default(1);
+            $table->text('description')->nullable();
             $table->string('image_url')->nullable();
-            $table->decimal('discounted_price', 10, 2)->nullable();
+            $table->decimal('discounted_price')->nullable();
             $table->unsignedInteger('discount_percentage')->nullable();
+
+            $table->softDeletes();
+            $table->innoDb();
             $table->timestamps();
         });
     }
