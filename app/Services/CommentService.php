@@ -11,8 +11,9 @@ use Illuminate\Http\Request;
 class CommentService {
     public function index(string $id) {
         $product = Product::find($id);
+        $comments = $product->comments()->get();
 
-        return response()->json($product->comments()->get());
+        return response()->json(CommentResource::collection($comments));
     }
 
     public function store(CommentRequest $request, string $productId) {

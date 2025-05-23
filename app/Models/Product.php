@@ -24,4 +24,11 @@ class Product extends BaseModel {
         $avg = $this->ratings()->avg('rating') ?? 0;
         return round($avg, 1);
     }
+
+    public function rateProduct(User $user, $rating) {
+        $this->ratings()->updateOrCreate(
+            ['user_id' => $user->id],
+            ['rating' => $rating]
+        );
+    }
 }

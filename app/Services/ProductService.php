@@ -6,6 +6,8 @@ use App\Http\Filters\ProductFilter;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
+use App\Models\User;
+use Request;
 
 class ProductService {
     public function index(ProductRequest $request) {
@@ -25,5 +27,9 @@ class ProductService {
         ];
 
         return response()->json($data);
+    }
+
+    public function rate(Request $request, $product) {
+
     }
 }
