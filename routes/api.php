@@ -18,7 +18,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
-    Route::get('/products/{id}/rate', [ProductController::class, 'rate']);
+    Route::post('/products/{id}/rate', [ProductController::class, 'rate']);
     Route::get('/favorites', [FavoriteController::class, 'index']);
     Route::get('/cart-items', [CartItemController::class, 'index']);
     Route::post('/cart-items', [CartItemController::class, 'store']);
